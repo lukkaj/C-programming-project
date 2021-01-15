@@ -1,6 +1,6 @@
-/*
-Header for C--programming project, Jesse Lukkarinen, 687559
-*/
+
+// Header for C--programming project
+
 
 #ifndef PROJECT_H
 #define PROJECT_H
