@@ -103,10 +103,11 @@ void updateCountry(Nation *data, char *buffer){
     printf("Given name is too long, give shorter or an abbreviation.\n");
     return;
   }
-
+  
   /* Check for right input format and EOF. */
   amount = sscanf(buffer, "%c %s %d %d %d", &user_input, country_name,
                                             &gld, &sil, &brz);
+  
   /* if not enought inputs or EOF back to main menu */
   if(amount != 5 || amount == EOF){
     printf("Invalid input, back to the main menu.\n");
@@ -145,13 +146,11 @@ void printTable(Nation *data, char *buffer){
     printf("Error, empty table, add countries with command 'A' or 'O'.\n");
     return;
   }
-
   /* If user tries to give too many inputs then back to main menu. */
   if(strlen(buffer) > 2){
     printf("Invalid input, back to main menu.\n");
     return;
   }
-
   /* Check if user input is correct */
   char user_input;
   int amount = sscanf(buffer, "%c", &user_input);
@@ -159,12 +158,10 @@ void printTable(Nation *data, char *buffer){
     printf("Invalid input, back to the main menu.\n");
     return;
   }
-
   /* How many countries are in database */
   for(int i = 0; i < (data->size);i++){
     counter = counter + 1;
   }
-
   /*
   Bubble sort to sort nations with most success in the olympics.
   If present value is smaller than next value, then the order will be changed.
@@ -208,7 +205,7 @@ void printTable(Nation *data, char *buffer){
   return;
 }
 
-/* Funktio W, write to given file. */
+/* Function W, write to given file. */
 void writeFile(Nation *data, char *buffer){
   char user_input;
   char filename[BUFFERSIZE];
@@ -240,7 +237,7 @@ void writeFile(Nation *data, char *buffer){
   return;
 }
 
-/* Funtcion O, Load given file. */
+/* Function O, Load given file. */
 Nation *readFile(Nation *data, char *buffer){
   char user_input;
   char filename[BUFFERSIZE];
