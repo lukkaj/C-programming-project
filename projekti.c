@@ -1,6 +1,3 @@
-/*
-Project for C-programming course, Jesse Lukkarinen, 687559.
-*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
